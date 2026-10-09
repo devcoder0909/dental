@@ -5709,15 +5709,38 @@ header.main-header .header-sticky.active{
    TABLET & MOBILE RESPONSIVE POLISH (max-width: 991px)
 ======================================================== */
 @media only screen and (max-width: 991px) {
+    .main-header {
+        position: relative;
+    }
     .header-sticky {
-        padding: 10px 0;
+        padding: 6px 0 !important; /* Reduced from 15px */
+    }
+    .navbar {
+        min-height: 44px !important;
+        padding: 0 !important;
+    }
+    .navbar-brand {
+        padding: 0 !important;
+        margin: 0 !important;
+        gap: 8px !important;
     }
     .navbar-brand img {
-        height: 42px !important;
-        max-width: 120px !important;
+        height: 36px !important; /* Compact logo */
+        max-width: 105px !important;
     }
     .navbar-brand span {
-        font-size: 0.88rem !important;
+        font-size: 0.82rem !important;
+        line-height: 1.1 !important;
+    }
+    .navbar-brand span span {
+        font-size: 0.62rem !important;
+    }
+    .btn-mobile-call {
+        display: none !important;
+    }
+    .slicknav_btn {
+        padding: 6px 10px !important;
+        margin: 0 !important;
     }
     .about-us,
     .our-services,
@@ -5728,7 +5751,7 @@ header.main-header .header-sticky.active{
     .our-transformation,
     .our-faqs,
     .book-appointment {
-        padding: 55px 0 !important;
+        padding: 50px 0 !important;
     }
     .clinic-gallery-item img {
         height: 240px;
@@ -5745,32 +5768,65 @@ header.main-header .header-sticky.active{
         width: 100% !important;
     }
 
+    .header-sticky {
+        padding: 5px 0 !important;
+    }
+    .navbar {
+        min-height: 40px !important;
+        padding: 0 !important;
+    }
+    .navbar-brand img {
+        height: 32px !important;
+        max-width: 92px !important;
+    }
+    .navbar-brand span {
+        font-size: 0.78rem !important;
+        line-height: 1.1 !important;
+    }
+    .navbar-brand span span {
+        font-size: 0.58rem !important;
+    }
+
     /* Fluid Section Titles */
     .section-title {
-        margin-bottom: 24px !important;
+        margin-bottom: 22px !important;
     }
     .section-title h2 {
-        font-size: clamp(22px, 5.8vw, 28px) !important;
+        font-size: clamp(21px, 5.8vw, 27px) !important;
         line-height: 1.25 !important;
     }
     .section-title h3 {
-        font-size: 13px !important;
+        font-size: 12.5px !important;
         letter-spacing: 0.8px !important;
     }
     .section-title p {
-        font-size: 14px !important;
+        font-size: 13.5px !important;
         line-height: 1.55 !important;
-        margin-top: 10px !important;
+        margin-top: 8px !important;
     }
 
-    /* Google Rating Badge in Hero */
+    /* Google Rating Badge in Hero - Mobile Friendly */
     .google-rating-badge {
-        padding: 6px 14px;
-        font-size: 12px;
-        margin-bottom: 16px;
+        padding: 5px 12px !important;
+        font-size: 11.5px !important;
+        margin-bottom: 12px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        border-radius: 50px !important;
+        white-space: nowrap !important;
+        max-width: 100% !important;
     }
     .google-rating-badge .rating-stars {
-        font-size: 11px;
+        font-size: 10.5px !important;
+    }
+    .google-rating-badge .rating-score {
+        font-size: 12px !important;
+        font-weight: 700 !important;
+    }
+    .google-rating-badge .rating-text {
+        font-size: 11.5px !important;
+        font-weight: 500 !important;
     }
 
     /* Hero Buttons */
@@ -5947,20 +6003,25 @@ header.main-header .header-sticky.active{
    SMALL SMARTPHONES (max-width: 400px)
 ======================================================== */
 @media only screen and (max-width: 400px) {
-    .navbar-brand span {
-        display: none !important; /* Hide brand text on ultra narrow screens, logo remains crisp */
+    .header-sticky {
+        padding: 4px 0 !important;
     }
     .navbar-brand img {
-        height: 38px !important;
+        height: 28px !important;
+        max-width: 80px !important;
+    }
+    .navbar-brand span {
+        font-size: 0.74rem !important;
+        line-height: 1.05 !important;
+    }
+    .navbar-brand span span {
+        display: none !important; /* Hide subtext 'Dental Clinic' on ultra narrow screens */
     }
     .section-title h2 {
         font-size: 20px !important;
     }
     .clinic-gallery-item img {
-        height: 190px;
-    }
-    .mobile-bar-btn span {
-        font-size: 10px;
+        height: 190px !important;
     }
 }
 
