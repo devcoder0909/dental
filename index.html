@@ -127,7 +127,8 @@
     
                             <!-- Hero Content Footer Start -->
                             <div class="hero-content-footer wow fadeInUp" data-wow-delay="0.5s">
-                                <a href="#appointment" class="btn-default">Book Appointment</a>
+                                <a href="https://wa.me/917008963520?text=Hello%20Dr.%20Saawan%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment%20at%20Mahashakti%20Dental%20Clinic." target="_blank" rel="noopener" class="btn-default btn-whatsapp"><i class="fa-brands fa-whatsapp me-2"></i> Book via WhatsApp</a>
+                                <a href="#appointment" class="btn-default">Book Online Form</a>
                                 <a href="https://www.google.com/maps/search/?api=1&query=SHOP+-+1,+1ST+FLOOR,+BHARAT+SHOPPING+COMPLEX,+Lewis+Rd,+above+LENSKART,+BJB+Nagar,+Bhubaneswar,+Odisha+751014" target="_blank" rel="noopener" class="btn-default btn-highlighted"><i class="fa-solid fa-location-dot me-1"></i> Get Directions</a>
                             </div>
                             <!-- Hero Content Footer End -->
@@ -173,7 +174,7 @@
 
                     <div class="col-lg-4 col-md-12">
                           <div class="cta-btn wow fadeInUp" data-wow-delay="0.5s">
-                            <a href="#appointment" class="btn-default">Book Online Appointment</a>
+                            <a href="https://wa.me/917008963520?text=Hello%20Dr.%20Saawan%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment%20at%20Mahashakti%20Dental%20Clinic." target="_blank" rel="noopener" class="btn-default btn-whatsapp"><i class="fa-brands fa-whatsapp me-2"></i> Book on WhatsApp</a>
                           </div>            
                     </div>
                 </div>
@@ -256,7 +257,7 @@
                         <div class="about-us-footer wow fadeInUp" data-wow-delay="0.75s">
                             <!-- About Us Footer Btn Start -->
                             <div class="about-us-footer-btn">
-                                <a href="#appointment" class="btn-default">Book Consultation</a>
+                                <a href="https://wa.me/917008963520?text=Hello%20Dr.%20Saawan%2C%20I%20would%20like%20to%20book%20a%20consultation%20at%20Mahashakti%20Dental%20Clinic." target="_blank" rel="noopener" class="btn-default btn-whatsapp"><i class="fa-brands fa-whatsapp me-2"></i> Book Consultation on WhatsApp</a>
                             </div>
                             <!-- About Us Footer Btn End -->
 
@@ -1450,6 +1451,19 @@
                             </div>
                         </div>
                         <!-- Section CTA Box End -->
+
+                        <!-- WhatsApp Direct Card Start -->
+                        <div class="section-cta-box wow fadeInUp mt-3" data-wow-delay="0.4s" style="background: linear-gradient(135deg, #25D366, #128C7E); border: none;">
+                            <div class="icon-box" style="background: rgba(255, 255, 255, 0.2);">
+                                <i class="fa-brands fa-whatsapp text-white" style="font-size: 26px;"></i>
+                            </div>
+                            <div class="section-cta-content text-white">
+                                <p style="color: rgba(255, 255, 255, 0.9);">Instant WhatsApp Booking</p>
+                                <h3 style="color: #ffffff;">Chat with Clinic</h3>
+                                <span><a href="https://wa.me/917008963520?text=Hello%20Dr.%20Saawan%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment%20at%20Mahashakti%20Dental%20Clinic." target="_blank" rel="noopener" style="color: #ffffff; text-decoration: underline; font-weight: 600;">Open WhatsApp: 070089 63520</a></span>
+                            </div>
+                        </div>
+                        <!-- WhatsApp Direct Card End -->
                     </div>
                     <!-- Book Appointment Sidebar End -->
                 </div>
@@ -1458,10 +1472,10 @@
                     <!-- Appointment Form Start -->
                     <div class="appointment-form wow fadeInUp" data-wow-delay="0.25s">
                         <div class="appointment-form-content">
-                            <p>Fill out the form below to request your visit at Mahashakti Dental Clinic. We will confirm your slot promptly.</p>
+                            <p>Fill out the form below to book your appointment. Submitting will instantly connect your details directly to <strong>Dr. Saawan Satpathy via WhatsApp</strong> for immediate slot confirmation!</p>
                         </div>
                         <!-- Form Start -->
-                        <form id="appointmentForm" action="#" method="POST" data-toggle="validator">
+                        <form id="appointmentForm" action="#" method="POST">
                             <div class="row">
                                 <div class="form-group col-md-6 mb-4">
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Full Name" required>
@@ -1474,12 +1488,12 @@
                                 </div>
 
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="email" name ="email" class="form-control" id="email" placeholder="Your Email Address" required>
+                                    <input type="email" name ="email" class="form-control" id="email" placeholder="Your Email Address (Optional)">
                                     <div class="help-block with-errors"></div>
                                 </div>
 
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="location" class="form-control" id="location" placeholder="Your City / Area in Bhubaneswar" required>
+                                    <input type="text" name="location" class="form-control" id="location" placeholder="Your Area in Bhubaneswar (e.g. BJB Nagar)" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
 
@@ -1512,8 +1526,9 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-12">
-                                    <button type="submit" class="btn-default">Book Appointment Now</button>
+                                <div class="col-md-12 d-flex flex-column flex-sm-row gap-3">
+                                    <button type="submit" class="btn-default btn-whatsapp" id="btnBookWhatsAppSubmit"><i class="fa-brands fa-whatsapp me-2" style="font-size: 19px;"></i> Book via WhatsApp</button>
+                                    <a href="tel:07008963520" class="btn-default btn-highlighted d-inline-flex align-items-center justify-content-center"><i class="fa-solid fa-phone me-2"></i> Call 070089 63520</a>
                                     <div id="msgSubmit" class="h3 hidden"></div>
                                 </div>
                             </div>
@@ -1689,5 +1704,35 @@
     <script src="js/wow.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
+
+    <!-- WhatsApp Booking Integration Script -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var appointmentForm = document.getElementById("appointmentForm");
+        if (appointmentForm) {
+            appointmentForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                var name = document.getElementById("name") ? document.getElementById("name").value.trim() : "";
+                var phone = document.getElementById("phone") ? document.getElementById("phone").value.trim() : "";
+                var location = document.getElementById("location") ? document.getElementById("location").value.trim() : "";
+                var date = document.getElementById("date") ? document.getElementById("date").value : "";
+                var time = document.getElementById("time") ? document.getElementById("time").value : "";
+                var reasonChecked = document.querySelector('input[name="reason"]:checked');
+                var reason = reasonChecked ? reasonChecked.value : "Dental Consultation";
+
+                var text = "Hello Dr. Saawan Satpathy, I would like to book a dental appointment at Mahashakti Dental Clinic:%0A%0A";
+                if (name) text += "• *Patient:* " + encodeURIComponent(name) + "%0A";
+                if (phone) text += "• *Contact:* " + encodeURIComponent(phone) + "%0A";
+                if (location) text += "• *Area:* " + encodeURIComponent(location) + "%0A";
+                if (date) text += "• *Date:* " + encodeURIComponent(date) + "%0A";
+                if (time) text += "• *Time:* " + encodeURIComponent(time) + "%0A";
+                text += "• *Treatment:* " + encodeURIComponent(reason) + "%0A%0A";
+                text += "Please confirm my appointment slot. Thank you!";
+
+                window.open("https://wa.me/917008963520?text=" + text, "_blank");
+            });
+        }
+    });
+    </script>
 </body>
 </html>
