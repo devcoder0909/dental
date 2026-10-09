@@ -1,12 +1,13 @@
 {
-  "name": "primecare-dental-clinic",
+  "name": "mahashakti-dental-clinic",
   "version": "1.0.0",
-  "description": "Primecare Dentist & Dental Clinic Website",
+  "description": "Mahashakti Dental Clinic Website",
   "scripts": {
+    "build": "echo 'Static build ready'",
     "start": "npx -y serve . -l 3000",
     "dev": "npx -y serve . -l 3000",
     "deploy:vercel": "npx -y vercel --prod",
-    "deploy:cloudflare": "npx -y wrangler pages deploy . --project-name primecare-dental"
+    "deploy:cloudflare": "npx -y wrangler pages deploy . --project-name mahashakti-dental"
   },
   "keywords": [
     "dental",
