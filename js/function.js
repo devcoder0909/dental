@@ -318,45 +318,63 @@
 	}
 	/* Contact form validation end */
 
-	/* Appointment form validation */
+	/* Appointment form direct WhatsApp booking */
 	var $appointmentForm = $("#appointmentForm");
-	$appointmentForm.validator({focus: false}).on("submit", function (event) {
-		if (!event.isDefaultPrevented()) {
+	if ($appointmentForm.length) {
+		$appointmentForm.on("submit", function (event) {
 			event.preventDefault();
-			submitappointmentForm();
-		}
-	});
+			
+			var name = $("#name").val() ? $("#name").val().trim() : "";
+			var phone = $("#phone").val() ? $("#phone").val().trim() : "";
+			var location = $("#location").val() ? $("#location").val().trim() : "";
+			var email = $("#email").val() ? $("#email").val().trim() : "";
+			var date = $("#date").val() ? $("#date").val() : "";
+			var time = $("#time").val() ? $("#time").val() : "";
+			var reason = $('input[name="reason"]:checked').val() || "Dental Consultation";
 
-	function submitappointmentForm(){
-		/* Ajax call to submit form */
-		$.ajax({
-			type: "POST",
-			url: "form-appointment.php",
-			data: $appointmentForm.serialize(),
-			success : function(text){
-				if (text == "success"){
-					appointmentformSuccess();
-				} else {
-					appointmentsubmitMSG(false,text);
+			if (!name || !phone) {
+				alert("Please enter your Full Name and Phone Number to book via WhatsApp.");
+				return false;
+			}
+
+			// Format structured clinical WhatsApp message
+			var message = "Hello Dr. Saawan Satpathy, I would like to book a dental appointment at Mahashakti Dental Clinic:\n\n";
+			message += "• Patient Name: " + name + "\n";
+			message += "• Phone Number: " + phone + "\n";
+			if (location) {
+				message += "• Location/Area: " + location + "\n";
+			}
+			if (email) {
+				message += "• Email: " + email + "\n";
+			}
+			if (date) {
+				message += "• Preferred Date: " + date + "\n";
+			}
+			if (time) {
+				message += "• Preferred Time: " + time + "\n";
+			}
+			message += "• Treatment Required: " + reason + "\n\n";
+			message += "Please confirm my appointment slot. Thank you!";
+
+			var whatsappUrl = "https://wa.me/917008963520?text=" + encodeURIComponent(message);
+			
+			var $status = $("#appointmentStatus");
+			if ($status.length) {
+				$status.removeClass("d-none alert-danger").addClass("alert alert-success").html(
+					'<i class="fa-brands fa-whatsapp me-2"></i> Connecting to Dr. Saawan Satpathy via WhatsApp... If not opened, <a href="' + whatsappUrl + '" target="_blank" class="fw-bold text-decoration-underline text-success">tap here to open WhatsApp</a>.'
+				);
+			}
+
+			if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+				window.location.href = whatsappUrl;
+			} else {
+				var openedWindow = window.open(whatsappUrl, "_blank");
+				if (!openedWindow || openedWindow.closed || typeof openedWindow.closed === "undefined") {
+					window.location.href = whatsappUrl;
 				}
 			}
 		});
 	}
-
-	function appointmentformSuccess(){
-		$appointmentForm[0].reset();
-		appointmentsubmitMSG(true, "Message Sent Successfully!")
-	}
-
-	function appointmentsubmitMSG(valid, msg){
-		if(valid){
-			var msgClasses = "h3 text-success";
-		} else {
-			var msgClasses = "h3 text-danger";
-		}
-		$("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
-	}
-	/* Appointment form validation end */
 
 	/* Animated Wow Js */	
 	new WOW().init();

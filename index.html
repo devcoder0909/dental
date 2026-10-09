@@ -126,9 +126,8 @@
     
                             <!-- Hero Content Footer Start -->
                             <div class="hero-content-footer wow fadeInUp" data-wow-delay="0.5s">
-                                <a href="https://wa.me/917008963520?text=Hello%20Dr.%20Saawan%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment%20at%20Mahashakti%20Dental%20Clinic." target="_blank" rel="noopener" class="btn-default btn-whatsapp"><i class="fa-brands fa-whatsapp me-2"></i> Book via WhatsApp</a>
-                                <a href="#appointment" class="btn-default">Book Online Form</a>
-                                <a href="https://www.google.com/maps/search/?api=1&query=SHOP+-+1,+1ST+FLOOR,+BHARAT+SHOPPING+COMPLEX,+Lewis+Rd,+above+LENSKART,+BJB+Nagar,+Bhubaneswar,+Odisha+751014" target="_blank" rel="noopener" class="btn-default btn-highlighted"><i class="fa-solid fa-location-dot me-1"></i> Get Directions</a>
+                                <a href="#appointment" class="btn-default btn-whatsapp"><i class="fa-brands fa-whatsapp me-2"></i> Book via WhatsApp</a>
+                                <a href="tel:07008963520" class="btn-default btn-highlighted"><i class="fa-solid fa-phone me-2"></i> Call 070089 63520</a>
                             </div>
                             <!-- Hero Content Footer End -->
                         </div>
@@ -173,7 +172,7 @@
 
                     <div class="col-lg-4 col-md-12 cta-col text-lg-end text-center">
                           <div class="cta-btn wow fadeInUp" data-wow-delay="0.5s">
-                            <a href="#appointment" class="cta-appointment-btn">Book Online Appointment <i class="fa-solid fa-plus ms-1"></i></a>
+                            <a href="#appointment" class="cta-appointment-btn"><i class="fa-brands fa-whatsapp me-2"></i> Book via WhatsApp</a>
                           </div>            
                     </div>
                 </div>
@@ -1474,61 +1473,58 @@
                             <p>Fill out the form below to book your appointment. Submitting will instantly connect your details directly to <strong>Dr. Saawan Satpathy via WhatsApp</strong> for immediate slot confirmation!</p>
                         </div>
                         <!-- Form Start -->
-                        <form id="appointmentForm" action="#" method="POST">
+                        <form id="appointmentForm" action="#" method="POST" novalidate>
                             <div class="row">
-                                <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Full Name" required>
-                                    <div class="help-block with-errors"></div>
+                                <div class="form-group col-md-6 mb-3">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Full Name *" required>
                                 </div>
 
-                                <div class="form-group col-md-6 mb-4">
-                                    <input type="tel" name="phone" class="form-control" id="phone" placeholder="Your Phone Number (e.g. 070089 63520)" required>
-                                    <div class="help-block with-errors"></div>
+                                <div class="form-group col-md-6 mb-3">
+                                    <input type="tel" name="phone" class="form-control" id="phone" placeholder="Your Phone Number (e.g. 070089 63520) *" required>
                                 </div>
 
-                                <div class="form-group col-md-6 mb-4">
-                                    <input type="email" name ="email" class="form-control" id="email" placeholder="Your Email Address (Optional)">
-                                    <div class="help-block with-errors"></div>
+                                <div class="form-group col-md-6 mb-3">
+                                    <input type="text" name="location" class="form-control" id="location" placeholder="Your Area in Bhubaneswar (e.g. BJB Nagar)">
                                 </div>
 
-                                <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="location" class="form-control" id="location" placeholder="Your Area in Bhubaneswar (e.g. BJB Nagar)" required>
-                                    <div class="help-block with-errors"></div>
+                                <div class="form-group col-md-6 mb-3">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Your Email Address (Optional)">
                                 </div>
 
-                                <div class="form-group col-md-6 mb-4">
-                                    <input type="date" name="date" class="form-control" id="date" required>
-                                    <div class="help-block with-errors"></div>
+                                <div class="form-group col-md-6 mb-3">
+                                    <input type="date" name="date" class="form-control" id="date" placeholder="Preferred Date">
                                 </div>
 
-                                <div class="form-group col-md-6 mb-4">
-                                    <input type="time" name="time" class="form-control" id="time" required>
-                                    <div class="help-block with-errors"></div>
+                                <div class="form-group col-md-6 mb-3">
+                                    <input type="time" name="time" class="form-control" id="time" placeholder="Preferred Time">
                                 </div>
 
-                                <div class="appointment-form-title">
-                                    <h3>Treatment Required</h3>
-                                </div>
-
-                                <div class="appointment-reason">
-                                    <div class="reason-box">
-                                        <input type="radio" id="routine" name="reason" value="Routine Checkup / Cleaning" checked>
-                                        <label for="routine">Checkup / Cleaning</label>
-                                    </div>                                      
-                                    <div class="reason-box">
-                                        <input type="radio" id="new" name="reason" value="Tooth Pain / Root Canal (RCT)">
-                                        <label for="new">Tooth Pain / RCT</label>
+                                <div class="col-12 mt-2 mb-2">
+                                    <div class="appointment-form-title mb-2">
+                                        <h3>Treatment Required</h3>
                                     </div>
-                                    <div class="reason-box">
-                                        <input type="radio" id="specific" name="reason" value="Cosmetic / Braces / Implants">
-                                        <label for="specific">Braces / Implants</label>
+                                    <div class="appointment-reason">
+                                        <div class="reason-box">
+                                            <input type="radio" id="routine" name="reason" value="Checkup / Cleaning" checked>
+                                            <label for="routine"><i class="fa-solid fa-tooth me-1"></i> Checkup / Cleaning</label>
+                                        </div>                                      
+                                        <div class="reason-box">
+                                            <input type="radio" id="new" name="reason" value="Tooth Pain / RCT">
+                                            <label for="new"><i class="fa-solid fa-bolt-lightning me-1"></i> Tooth Pain / RCT</label>
+                                        </div>
+                                        <div class="reason-box">
+                                            <input type="radio" id="specific" name="reason" value="Braces / Implants">
+                                            <label for="specific"><i class="fa-solid fa-sparkles me-1"></i> Braces / Implants</label>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="col-md-12 d-flex flex-column flex-sm-row gap-3">
-                                    <button type="submit" class="btn-default btn-whatsapp" id="btnBookWhatsAppSubmit"><i class="fa-brands fa-whatsapp me-2" style="font-size: 19px;"></i> Book via WhatsApp</button>
+                                <div class="col-md-12 d-flex flex-column flex-sm-row gap-3 pt-2">
+                                    <button type="submit" class="btn-default btn-whatsapp" id="btnBookWhatsAppSubmit"><i class="fa-brands fa-whatsapp me-2" style="font-size: 20px;"></i> Book via WhatsApp</button>
                                     <a href="tel:07008963520" class="btn-default btn-highlighted d-inline-flex align-items-center justify-content-center"><i class="fa-solid fa-phone me-2"></i> Call 070089 63520</a>
-                                    <div id="msgSubmit" class="h3 hidden"></div>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <div id="appointmentStatus" class="alert d-none" role="alert"></div>
                                 </div>
                             </div>
                         </form>
@@ -1692,15 +1688,11 @@
         <div class="mobile-bar-items">
             <a href="tel:07008963520" class="mobile-bar-btn call-btn">
                 <i class="fa-solid fa-phone"></i>
-                <span>Call Now</span>
+                <span>Call Clinic</span>
             </a>
-            <a href="#appointment" class="mobile-bar-btn book-btn">
-                <i class="fa-solid fa-calendar-check"></i>
-                <span>Book Visit</span>
-            </a>
-            <a href="https://wa.me/917008963520?text=Hello%20Dr.%20Saawan%2C%20I%20would%20like%20to%20inquire%20about%20a%20dental%20appointment%20at%20Mahashakti%20Dental%20Clinic." target="_blank" rel="noopener" class="mobile-bar-btn whatsapp-btn">
+            <a href="#appointment" class="mobile-bar-btn whatsapp-btn">
                 <i class="fa-brands fa-whatsapp"></i>
-                <span>WhatsApp</span>
+                <span>Book (WhatsApp)</span>
             </a>
             <a href="https://www.google.com/maps/search/?api=1&query=SHOP+-+1,+1ST+FLOOR,+BHARAT+SHOPPING+COMPLEX,+Lewis+Rd,+above+LENSKART,+BJB+Nagar,+Bhubaneswar,+Odisha+751014" target="_blank" rel="noopener" class="mobile-bar-btn map-btn">
                 <i class="fa-solid fa-location-dot"></i>
@@ -1743,32 +1735,13 @@
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
 
-    <!-- WhatsApp Booking Integration Script -->
+    <!-- Date Picker Min Date Initialization -->
     <script>
     document.addEventListener("DOMContentLoaded", function () {
-        var appointmentForm = document.getElementById("appointmentForm");
-        if (appointmentForm) {
-            appointmentForm.addEventListener("submit", function (e) {
-                e.preventDefault();
-                var name = document.getElementById("name") ? document.getElementById("name").value.trim() : "";
-                var phone = document.getElementById("phone") ? document.getElementById("phone").value.trim() : "";
-                var location = document.getElementById("location") ? document.getElementById("location").value.trim() : "";
-                var date = document.getElementById("date") ? document.getElementById("date").value : "";
-                var time = document.getElementById("time") ? document.getElementById("time").value : "";
-                var reasonChecked = document.querySelector('input[name="reason"]:checked');
-                var reason = reasonChecked ? reasonChecked.value : "Dental Consultation";
-
-                var text = "Hello Dr. Saawan Satpathy, I would like to book a dental appointment at Mahashakti Dental Clinic:%0A%0A";
-                if (name) text += "• *Patient:* " + encodeURIComponent(name) + "%0A";
-                if (phone) text += "• *Contact:* " + encodeURIComponent(phone) + "%0A";
-                if (location) text += "• *Area:* " + encodeURIComponent(location) + "%0A";
-                if (date) text += "• *Date:* " + encodeURIComponent(date) + "%0A";
-                if (time) text += "• *Time:* " + encodeURIComponent(time) + "%0A";
-                text += "• *Treatment:* " + encodeURIComponent(reason) + "%0A%0A";
-                text += "Please confirm my appointment slot. Thank you!";
-
-                window.open("https://wa.me/917008963520?text=" + text, "_blank");
-            });
+        var dateInput = document.getElementById("date");
+        if (dateInput) {
+            var today = new Date().toISOString().split("T")[0];
+            dateInput.min = today;
         }
     });
     </script>
