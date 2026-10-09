@@ -6372,5 +6372,307 @@ header.main-header .header-sticky.active{
     }
 }
 
+/* ========================================================
+   PREMIUM MOBILE-FIRST ARCHITECTURE & PROFESSIONAL DESIGN
+======================================================== */
+
+/* Mobile SlickNav Navigation Menu */
+.slicknav_menu {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+.slicknav_btn {
+    background: #4F46E5 !important;
+    border-radius: 10px !important;
+    padding: 10px 12px !important;
+    margin: 0 !important;
+    text-shadow: none !important;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3) !important;
+    transition: all 0.2s ease !important;
+}
+
+.slicknav_btn:hover {
+    background: #4338CA !important;
+}
+
+.slicknav_nav {
+    background: #0B0B38 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35) !important;
+    padding: 12px 8px !important;
+    margin-top: 14px !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.slicknav_nav li {
+    margin: 3px 0 !important;
+}
+
+.slicknav_nav a {
+    color: #FFFFFF !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    padding: 11px 18px !important;
+    border-radius: 12px !important;
+    transition: all 0.2s ease !important;
+    letter-spacing: -0.2px !important;
+}
+
+.slicknav_nav a:hover,
+.slicknav_nav a:active,
+.slicknav_nav .active a {
+    background: rgba(79, 70, 229, 0.25) !important;
+    color: #818CF8 !important;
+    padding-left: 22px !important;
+}
+
+/* Review Topics Horizontal Swipe on Mobile */
+.review-chips-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.review-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: #F1F5F9;
+    border: 1px solid #E2E8F0;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.review-chip.active {
+    background: #4F46E5;
+    border-color: #4F46E5;
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+@media only screen and (max-width: 767px) {
+    .review-chips-wrapper {
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding-bottom: 8px !important;
+        margin-top: 12px !important;
+        scrollbar-width: none !important;
+    }
+    .review-chips-wrapper::-webkit-scrollbar {
+        display: none !important;
+    }
+    .review-chip {
+        flex-shrink: 0 !important;
+        font-size: 12px !important;
+        padding: 6px 12px !important;
+    }
+}
+
+/* Appointment Form Modern Radio Chips */
+.appointment-reason {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin-bottom: 28px !important;
+}
+
+.appointment-reason .reason-box {
+    width: auto !important;
+    flex: 1 1 calc(33.33% - 10px) !important;
+    min-width: 130px !important;
+    position: relative !important;
+}
+
+.appointment-reason .reason-box input[type="radio"] {
+    position: absolute !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+}
+
+.appointment-reason .reason-box label {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 12px 14px !important;
+    border: 1.5px solid #E2E8F0 !important;
+    border-radius: 12px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #475569 !important;
+    background: #F8FAFC !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    margin: 0 !important;
+    width: 100% !important;
+    user-select: none;
+}
+
+.appointment-reason .reason-box input[type="radio"]:checked + label {
+    background: #EEF2FF !important;
+    border-color: #4F46E5 !important;
+    color: #4F46E5 !important;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.18) !important;
+    font-weight: 700 !important;
+}
+
+/* Compact Section Padding across all mobile views (320px - 767px) */
+@media only screen and (max-width: 767px) {
+    .our-service,
+    .our-expertise,
+    .why-choose-us,
+    .how-it-work,
+    .our-transformation,
+    .our-faqs,
+    .our-blog,
+    .book-appointment {
+        padding: 45px 0 !important;
+    }
+
+    /* Service Cards on Mobile */
+    .service-item {
+        padding: 22px 18px !important;
+        border-radius: 22px !important;
+        margin-bottom: 20px !important;
+        height: auto !important;
+    }
+    .service-header {
+        padding-bottom: 14px !important;
+        margin-bottom: 14px !important;
+    }
+    .service-item-box .icon-box {
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 12px !important;
+        margin-right: 12px !important;
+    }
+    .service-item-box .icon-box img {
+        max-width: 26px !important;
+    }
+    .service-item-content h3 {
+        font-size: 17px !important;
+    }
+    .service-body {
+        margin-bottom: 18px !important;
+    }
+    .service-body p {
+        font-size: 13.5px !important;
+        line-height: 1.55 !important;
+    }
+    .service-image {
+        border-radius: 16px !important;
+    }
+    .service-image img {
+        border-radius: 16px !important;
+    }
+
+    /* How It Work Mobile Adjustments */
+    .how-work-image {
+        margin-right: 0 !important;
+        margin-top: 25px !important;
+    }
+    .doctor-work-img-box {
+        display: none !important; /* Hide floating center card on small screens so images are clean */
+    }
+    .faq-accordion.how-work-accordion .accordion-item {
+        margin-bottom: 18px !important;
+        padding-bottom: 18px !important;
+    }
+    .faq-accordion.how-work-accordion .accordion-header .accordion-button {
+        font-size: 15px !important;
+        padding-left: 36px !important;
+    }
+    .faq-accordion.how-work-accordion .accordion-header .accordion-button span {
+        font-size: 16px !important;
+        color: #4F46E5 !important;
+    }
+    .faq-accordion.how-work-accordion .accordion-body p {
+        font-size: 13.5px !important;
+        line-height: 1.55 !important;
+        padding-left: 36px !important;
+    }
+
+    /* Why Choose Us Mobile List */
+    .why-choose-item {
+        padding-bottom: 18px !important;
+        margin-bottom: 18px !important;
+    }
+    .why-choose-item .icon-box {
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 12px !important;
+        margin-right: 14px !important;
+        flex-shrink: 0 !important;
+    }
+    .why-choose-item-content h3 {
+        font-size: 16px !important;
+    }
+    .why-choose-item-content p {
+        font-size: 13px !important;
+    }
+
+    /* Appointment Form on Mobile */
+    .appointment-form {
+        padding: 24px 18px !important;
+        border-radius: 22px !important;
+    }
+    .appointment-form-content p {
+        font-size: 13.5px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 20px !important;
+    }
+    .appointment-reason .reason-box {
+        flex: 1 1 100% !important; /* Full width option buttons on small smartphones */
+    }
+
+    /* Blog / Oral Health Advice Cards on Mobile */
+    .blog-item {
+        margin-bottom: 24px !important;
+    }
+    .post-item-body {
+        padding: 16px 14px !important;
+    }
+    .post-item-content h3 {
+        font-size: 16px !important;
+        line-height: 1.35 !important;
+    }
+    .post-item-content p {
+        font-size: 13px !important;
+    }
+
+    /* Real Clinic Tour on Mobile */
+    #gallery {
+        padding: 45px 0 20px !important;
+    }
+    .clinic-gallery-item {
+        margin-bottom: 16px !important;
+        border-radius: 16px !important;
+    }
+    .clinic-gallery-item img {
+        height: 200px !important;
+    }
+    .clinic-gallery-caption {
+        padding: 10px 14px !important;
+    }
+    .clinic-gallery-caption h4 {
+        font-size: 14px !important;
+    }
+    .clinic-gallery-caption p {
+        font-size: 11px !important;
+    }
+}
+
 
 

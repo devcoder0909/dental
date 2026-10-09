@@ -34,6 +34,11 @@
 		prependTo : '.responsive-menu'
 	});
 
+	// Auto close mobile menu upon clicking any navigation link
+	$(document).on('click', '.slicknav_nav a', function() {
+		$('#menu').slicknav('close');
+	});
+
 	if($("a[href='#top']").length){
 		$("a[href='#top']").click(function() {
 			$("html, body").animate({ scrollTop: 0 }, "slow");
