@@ -5603,4 +5603,356 @@ header.main-header .header-sticky.active{
     font-size: 17px;
     box-shadow: 0 4px 10px rgba(79, 70, 229, 0.25);
     flex-shrink: 0;
+}
+
+/* ========================================================
+   MOBILE-FIRST ENHANCED RESPONSIVE STYLES
+======================================================== */
+
+/* Header Mobile Call Button */
+.btn-mobile-call {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #10B981;
+    color: #FFFFFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.35);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.btn-mobile-call:hover,
+.btn-mobile-call:focus {
+    color: #FFFFFF;
+    background: #059669;
+    transform: scale(1.05);
+}
+
+/* Mobile Sticky Bottom Bar */
+.mobile-sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9998;
+    background: rgba(11, 11, 56, 0.95);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 6px 10px;
+    padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+}
+.mobile-bar-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 6px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.mobile-bar-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    flex: 1;
+    padding: 6px 4px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.15;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.mobile-bar-btn:active {
+    transform: scale(0.96);
+}
+.mobile-bar-btn i {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+.mobile-bar-btn.call-btn {
+    background: #10B981;
+    color: #FFFFFF;
+}
+.mobile-bar-btn.book-btn {
+    background: #4F46E5;
+    color: #FFFFFF;
+}
+.mobile-bar-btn.whatsapp-btn {
+    background: #25D366;
+    color: #FFFFFF;
+}
+.mobile-bar-btn.map-btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding-bottom: 68px; /* Offset for sticky bottom action bar */
+    }
+}
+
+/* ========================================================
+   TABLET & MOBILE RESPONSIVE POLISH (max-width: 991px)
+======================================================== */
+@media only screen and (max-width: 991px) {
+    .header-sticky {
+        padding: 10px 0;
+    }
+    .navbar-brand img {
+        height: 42px !important;
+        max-width: 120px !important;
+    }
+    .navbar-brand span {
+        font-size: 0.88rem !important;
+    }
+    .about-us,
+    .our-services,
+    .clinic-gallery-section,
+    .why-choose-us,
+    .how-it-work,
+    .our-testimonials,
+    .our-transformation,
+    .our-faqs,
+    .book-appointment {
+        padding: 55px 0 !important;
+    }
+    .clinic-gallery-item img {
+        height: 240px;
+    }
+}
+
+/* ========================================================
+   MOBILE SCREENS (max-width: 767px)
+======================================================== */
+@media only screen and (max-width: 767px) {
+    /* Prevent any horizontal page overflow */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    /* Fluid Section Titles */
+    .section-title {
+        margin-bottom: 24px !important;
+    }
+    .section-title h2 {
+        font-size: clamp(22px, 5.8vw, 28px) !important;
+        line-height: 1.25 !important;
+    }
+    .section-title h3 {
+        font-size: 13px !important;
+        letter-spacing: 0.8px !important;
+    }
+    .section-title p {
+        font-size: 14px !important;
+        line-height: 1.55 !important;
+        margin-top: 10px !important;
+    }
+
+    /* Google Rating Badge in Hero */
+    .google-rating-badge {
+        padding: 6px 14px;
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+    .google-rating-badge .rating-stars {
+        font-size: 11px;
+    }
+
+    /* Hero Buttons */
+    .hero-content-footer {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        align-items: stretch;
+    }
+    .hero-content-footer .btn-default,
+    .hero-content-footer .btn-default.btn-highlighted {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        padding: 14px 20px !important;
+        font-size: 14px;
+    }
+
+    /* Floating CTA Cards */
+    .our-cta-box {
+        position: relative !important;
+        bottom: auto !important;
+        margin: -25px auto 25px !important;
+        padding: 0 12px !important;
+    }
+    .cta-content-box {
+        padding: 16px 12px !important;
+        border-radius: 18px !important;
+        gap: 12px;
+    }
+    .cta-item {
+        padding: 6px 0;
+    }
+    .cta-item .icon-box {
+        width: 44px;
+        height: 44px;
+        margin-right: 12px;
+    }
+    .cta-item-content h3 {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+    .cta-item-content p {
+        font-size: 13px;
+        margin: 0;
+    }
+    .cta-btn .btn-default {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        padding: 14px 18px;
+    }
+
+    /* About Us Counter Box */
+    .about-image {
+        margin-top: 25px;
+    }
+    .company-experience {
+        position: relative !important;
+        left: auto !important;
+        bottom: auto !important;
+        margin-top: 15px;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .company-experience-box {
+        border-radius: 16px !important;
+        padding: 14px 20px !important;
+    }
+    .about-us-body {
+        gap: 15px;
+        flex-direction: column;
+        margin: 20px 0 !important;
+    }
+    .about-body-item {
+        width: 100%;
+    }
+
+    /* Clinic Tour Gallery Grid */
+    .clinic-gallery-item {
+        margin-bottom: 18px;
+        border-radius: 16px;
+    }
+    .clinic-gallery-item img {
+        height: 220px;
+    }
+    .clinic-gallery-caption {
+        padding: 12px 16px;
+    }
+    .clinic-gallery-caption h4 {
+        font-size: 15px;
+    }
+    .clinic-gallery-caption p {
+        font-size: 11px;
+    }
+
+    /* Google Reviews Section */
+    .google-rating-pill {
+        padding: 5px 12px;
+        font-size: 13px;
+    }
+    .review-chips-wrapper {
+        gap: 6px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .review-chip {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .testimonial-item {
+        padding: 20px 16px !important;
+        border-radius: 16px !important;
+    }
+    .testimonial-content p {
+        font-size: 14px !important;
+        line-height: 1.55 !important;
+    }
+    .reviewer-avatar-badge {
+        width: 42px;
+        height: 42px;
+        font-size: 15px;
+    }
+    .testimonial-btn {
+        margin-top: 15px;
+    }
+
+    /* Appointment Form on Mobile (Prevent iOS Auto-Zoom) */
+    .appointment-form input,
+    .appointment-form select,
+    .appointment-form textarea {
+        font-size: 16px !important;
+        padding: 12px 14px !important;
+        border-radius: 10px !important;
+    }
+    .appointment-form .btn-default {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        padding: 15px 20px;
+    }
+
+    /* FAQs Accordion */
+    .faq-accordion .accordion-button {
+        font-size: 15px !important;
+        padding: 14px 16px !important;
+        line-height: 1.4 !important;
+    }
+    .faq-accordion .accordion-body {
+        padding: 12px 16px !important;
+        font-size: 14px !important;
+    }
+
+    /* Footer on Mobile */
+    .main-footer {
+        padding: 45px 0 20px !important;
+    }
+    .about-footer {
+        margin-bottom: 30px;
+    }
+    .footer-contact-content a.btn-default {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+    }
+}
+
+/* ========================================================
+   SMALL SMARTPHONES (max-width: 400px)
+======================================================== */
+@media only screen and (max-width: 400px) {
+    .navbar-brand span {
+        display: none !important; /* Hide brand text on ultra narrow screens, logo remains crisp */
+    }
+    .navbar-brand img {
+        height: 38px !important;
+    }
+    .section-title h2 {
+        font-size: 20px !important;
+    }
+    .clinic-gallery-item img {
+        height: 190px;
+    }
+    .mobile-bar-btn span {
+        font-size: 10px;
+    }
 }
