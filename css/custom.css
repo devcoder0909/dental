@@ -5631,70 +5631,77 @@ header.main-header .header-sticky.active{
     transform: scale(1.05);
 }
 
-/* Mobile Sticky Bottom Bar */
+/* Mobile Sticky Bottom Bar - 2 Items: Call & Booking (WhatsApp) */
 .mobile-sticky-bar {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 9998;
-    background: rgba(11, 11, 56, 0.95);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    padding: 6px 10px;
-    padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+    background: rgba(11, 11, 56, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px 14px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -6px 25px rgba(0, 0, 0, 0.35);
 }
 .mobile-bar-items {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 6px;
+    justify-content: space-between;
+    gap: 12px;
     max-width: 500px;
     margin: 0 auto;
 }
 .mobile-bar-btn {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     flex: 1;
-    padding: 6px 4px;
-    border-radius: 8px;
-    font-size: 11px;
-    font-weight: 600;
-    line-height: 1.15;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.2px;
     transition: transform 0.15s ease, opacity 0.15s ease;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 .mobile-bar-btn:active {
-    transform: scale(0.96);
+    transform: scale(0.97);
 }
 .mobile-bar-btn i {
-    font-size: 16px;
-    margin-bottom: 3px;
+    font-size: 18px;
+    margin-right: 8px;
+    margin-bottom: 0;
 }
 .mobile-bar-btn.call-btn {
-    background: #10B981;
+    background: #0F172A;
     color: #FFFFFF;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
 }
-.mobile-bar-btn.book-btn {
-    background: #4F46E5;
+.mobile-bar-btn.call-btn:hover {
     color: #FFFFFF;
+    background: #1E293B;
 }
 .mobile-bar-btn.whatsapp-btn {
-    background: #25D366;
+    background: linear-gradient(135deg, #25D366, #128C7E);
     color: #FFFFFF;
+    border: none;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
 }
-.mobile-bar-btn.map-btn {
-    background: rgba(255, 255, 255, 0.15);
+.mobile-bar-btn.whatsapp-btn:hover {
     color: #FFFFFF;
+    filter: brightness(1.05);
 }
 
 @media only screen and (max-width: 768px) {
     body {
-        padding-bottom: 68px; /* Offset for sticky bottom action bar */
+        padding-bottom: 74px; /* Offset for 2-button sticky bottom action bar */
     }
 }
 
