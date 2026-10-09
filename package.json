@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Mahashakti Dental Clinic Website",
   "scripts": {
-    "build": "echo 'Static build ready'",
     "start": "npx -y serve . -l 3000",
     "dev": "npx -y serve . -l 3000",
     "deploy:vercel": "npx -y vercel --prod",
