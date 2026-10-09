@@ -5977,4 +5977,230 @@ header.main-header .header-sticky.active{
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
     transform: translateY(-2px);
 }
+
+/* ========================================================
+   ENHANCED CTA BOX & ZERO-SPACING POLISH
+======================================================== */
+
+/* Remove rogue blue cursor dot completely */
+.cb-cursor,
+.cb-cursor:before,
+.cb-cursor-text {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Eliminate unnecessary whitespace in Hero and surrounding sections */
+.hero {
+    padding-bottom: 0 !important;
+    position: relative;
+}
+
+.hero.bg-image .hero-section {
+    padding: 100px 0 100px !important; /* Compact, balanced hero padding */
+}
+
+.our-cta-box {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: -50px auto 0 !important;
+    z-index: 20 !important;
+    width: 100%;
+}
+
+.cta-content-box {
+    background: #FFFFFF !important;
+    border-radius: 32px !important;
+    box-shadow: 0 14px 40px rgba(11, 11, 56, 0.08) !important;
+    border: 1px solid #ECECFE !important;
+    padding: 20px 32px !important;
+    margin: 0 !important;
+}
+
+.cta-item {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #EBEBFA !important;
+    padding-right: 20px;
+}
+
+.cta-item .icon-box {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 14px !important;
+    background: #5E5EEE !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0;
+    margin-right: 14px !important;
+    transition: all 0.3s ease;
+}
+
+.cta-item:hover .icon-box {
+    background: #4B4BD6 !important;
+    transform: scale(1.04);
+}
+
+.cta-item .icon-box img {
+    max-width: 26px !important;
+    max-height: 26px !important;
+    filter: brightness(0) invert(1) !important;
+}
+
+.cta-item-content {
+    width: calc(100% - 66px) !important;
+}
+
+.cta-item-content h3 {
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    color: #0F172A !important;
+    margin: 0 0 3px 0 !important;
+    text-transform: none !important;
+    letter-spacing: -0.1px;
+}
+
+.cta-item-content p {
+    font-size: 15.5px !important;
+    font-weight: 700 !important;
+    color: #64748B !important;
+    margin: 0 !important;
+    line-height: 1.25 !important;
+}
+
+.cta-item-content p a {
+    color: #64748B !important;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.cta-item-content p a:hover {
+    color: #5E5EEE !important;
+}
+
+.cta-appointment-btn {
+    background: #5E5EEE !important;
+    color: #FFFFFF !important;
+    border-radius: 50px !important;
+    padding: 13px 28px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 5px 18px rgba(94, 94, 238, 0.35) !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    border: none !important;
+}
+
+.cta-appointment-btn:hover {
+    background: #4B4BD6 !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 8px 24px rgba(94, 94, 238, 0.45) !important;
+    transform: translateY(-2px);
+}
+
+/* About Us balanced top spacing without huge gaps */
+.about-us {
+    padding: 65px 0 !important;
+}
+
+/* Google Maps Location Section */
+.clinic-location-section {
+    padding: 65px 0 !important;
+    background: #FAFAFF;
+}
+
+.map-embed-wrapper {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    border: 2px solid #EEEEFB;
+    position: relative;
+    background: #0B0B38;
+}
+
+.map-embed-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 420px;
+}
+
+/* Responsive CTA Box Across Devices */
+@media only screen and (max-width: 991px) {
+    .hero.bg-image .hero-section {
+        padding: 70px 0 60px !important;
+    }
+    .our-cta-box {
+        margin: -35px auto 15px !important;
+        padding: 0 12px;
+    }
+    .cta-content-box {
+        padding: 18px 20px !important;
+        border-radius: 24px !important;
+    }
+    .cta-item {
+        border-right: none !important;
+        border-bottom: 1px solid #ECECFE !important;
+        padding-bottom: 12px !important;
+        margin-bottom: 12px !important;
+        padding-right: 0 !important;
+    }
+    .cta-col:last-child .cta-item {
+        border-bottom: none !important;
+    }
+    .cta-appointment-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    .about-us {
+        padding: 45px 0 !important;
+    }
+    .clinic-location-section {
+        padding: 45px 0 !important;
+    }
+    .map-embed-wrapper iframe {
+        height: 340px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hero.bg-image .hero-section {
+        padding: 45px 0 45px !important;
+    }
+    .our-cta-box {
+        margin: -25px auto 20px !important;
+        padding: 0 10px !important;
+    }
+    .cta-content-box {
+        padding: 16px 14px !important;
+        border-radius: 20px !important;
+    }
+    .cta-item .icon-box {
+        width: 46px !important;
+        height: 46px !important;
+        border-radius: 12px !important;
+        margin-right: 12px !important;
+    }
+    .cta-item .icon-box img {
+        max-width: 22px !important;
+    }
+    .cta-item-content h3 {
+        font-size: 13px !important;
+    }
+    .cta-item-content p {
+        font-size: 14px !important;
+    }
+    .map-embed-wrapper iframe {
+        height: 300px;
+    }
+}
+
 
