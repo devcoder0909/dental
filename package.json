@@ -1,0 +1,19 @@
+{
+  "name": "primecare-dental-clinic",
+  "version": "1.0.0",
+  "description": "Primecare Dentist & Dental Clinic Website",
+  "scripts": {
+    "start": "npx -y serve . -l 3000",
+    "dev": "npx -y serve . -l 3000",
+    "deploy:vercel": "npx -y vercel --prod",
+    "deploy:cloudflare": "npx -y wrangler pages deploy . --project-name primecare-dental"
+  },
+  "keywords": [
+    "dental",
+    "clinic",
+    "dentist",
+    "healthcare"
+  ],
+  "author": "",
+  "license": "ISC"
+}
