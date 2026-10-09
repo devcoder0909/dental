@@ -5510,3 +5510,97 @@ header.main-header .header-sticky.active{
 .footer-contact-content a:hover {
     color: var(--accent-color);
 }
+
+/* ========================================================
+   GOOGLE REVIEWS & PATIENT RATING STYLES
+======================================================== */
+.google-rating-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1E293B;
+    margin-bottom: 12px;
+}
+.google-rating-pill .rating-val {
+    font-weight: 800;
+    color: #0F172A;
+}
+.google-rating-pill .stars {
+    color: #F59E0B;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.google-rating-pill .count {
+    color: #64748B;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.review-chips-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+    margin-bottom: 15px;
+}
+.review-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: #F1F5F9;
+    color: #334155;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #E2E8F0;
+    transition: all 0.25s ease;
+}
+.review-chip.active,
+.review-chip:hover {
+    background: var(--accent-color, #5E5EEE);
+    color: #FFFFFF;
+    border-color: var(--accent-color, #5E5EEE);
+}
+.review-chip i {
+    font-size: 11px;
+}
+
+.google-review-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F1F5F9;
+}
+.google-review-stars {
+    color: #F59E0B;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.google-review-time {
+    font-size: 12px;
+    color: #94A3B8;
+}
+.reviewer-avatar-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4F46E5, #06B6D4);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 17px;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.25);
+    flex-shrink: 0;
+}
